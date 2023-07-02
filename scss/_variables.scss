@@ -1,0 +1,22 @@
+$clr-primary: #0075be;
+$clr-primary-light: #0399da;
+$clr-white: white;
+$clr-grey: #7a7a7a9d;
+$clr-outline: #000000;
+
+@font-face {
+    font-family: 'PT Sans Bold';
+    src: url('../fonts/PT Sans/PT_Sans-Web-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT Sans/PT_Sans-Web-Regular.ttf');
+}
+
+$font-Sans: 'PT Sans';
+$font-SansBold: 'PT Sans Bold';
+$font-Arial: 'Arial';
+
+$weight700: 700;
+$weight800: 800;

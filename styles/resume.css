@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../fonts/PT Sans/PT_Sans-Web-Bold.ttf");
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans/PT_Sans-Web-Regular.ttf");
+}
+body {
+  font-size: 16px;
+  margin-inline: 2em;
+  margin-block: 1em;
+}
+@media screen and (min-width: 800px) {
+  body {
+    margin-inline: auto;
+    width: 800px;
+  }
+}
+
+section {
+  font-family: "PT Sans";
+}
+section header {
+  font-size: 2em;
+  font-family: "PT Sans Bold";
+  color: #0399da;
+  border-bottom: 0.1em solid #0399da;
+}
+section article {
+  margin-block: 2em;
+}
+section#education span.university-name {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+section#education .degree-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+section#education .degree-list .degree-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  transition: background-color 200ms;
+  padding: 1em 1em;
+}
+section#education .degree-list .degree-item :nth-child(1) {
+  text-align: start;
+}
+section#education .degree-list .degree-item :nth-child(2) {
+  text-align: end;
+}
+section#education .degree-list .degree-item:hover {
+  background-color: rgb(230, 230, 230);
+}
+section#education .degree-list .degree-item .name {
+  font-weight: 700;
+  border-left: 2px solid black;
+  padding-left: 0.5em;
+}
+section#education .degree-list .degree-item .date-graduation {
+  color: rgba(122, 122, 122, 0.6156862745);
+}
+section#education .degree-list .degree-item .info-list {
+  font-style: normal;
+  margin-bottom: 0;
+}/*# sourceMappingURL=resume.css.map */
