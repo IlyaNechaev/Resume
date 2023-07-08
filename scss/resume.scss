@@ -15,56 +15,132 @@ section {
   font-family: $font-Sans;
 
   header {
-    font-size: 2em;
+    font-size: $font-large;
     font-family: $font-SansBold;
     color: $clr-primary-light;
 
-    border-bottom: .1em solid $clr-primary-light;
+    border-bottom: 0.1em solid $clr-primary-light;
   }
   article {
     margin-block: 2em;
   }
+}
 
-  &#education {
-    span.university-name {
-      font-weight: 900;
-      font-size: 1.2em;
+#head {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1.5em;
+  margin-bottom: 2em;
+
+  .photo > img {
+    width: 100%;
+    box-shadow: 0 0 0.5em 0.5em rgba(1, 1, 1, 0.2);
+  }
+  .description {
+    span.name {
+      font-size: $font-large;
+      font-family: $font-SansBold;
+      color: black;
     }
-    .degree-list {
-        display: flex;
-        flex-direction: column;
-        // gap: 2em;
-        margin-top: 1em;
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7em;
+      margin-top: 1em;
 
-        .degree-item {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            transition: background-color 200ms;
-            padding: 1em 1em;
+      .telegram,
+      .email,
+      .phone {
+        text-decoration: none;
+        color: black;
+        width: fit-content;
 
-            :nth-child(1) {
-                text-align: start;
-            }
-            :nth-child(2) {
-                text-align: end;
-            }
-            &:hover {
-                background-color: rgb(230, 230, 230);
-            }
-
-            .name {
-                font-weight: 700;
-                border-left: 2px solid black;
-                padding-left: .5em;
-            }
-            .date-graduation {
-                color: $clr-grey;
-            }
-            .info-list {
-                font-style: normal;
-                margin-bottom: 0;
-            }
+        &::before {
+          content: "";
+          display: inline-flex;
+          margin-right: 0.5em;
+          background-size: repeat(2, 1em);
+          width: 1em;
+          height: 1em;
         }
+      }
+      .telegram::before {
+        background-image: url("../svg/telegram.svg");
+      }
+      .email::before {
+        background-image: url("../svg/envelope-solid.svg");
+      }
+      .phone::before {
+        background-image: url("../svg/phone-solid.svg");
+      }
     }
   }
+}
+
+#education {
+  span.university-name {
+    font-weight: 900;
+    font-size: $font-normal;
+  }
+  .degree-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+
+    .degree-item {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      transition: background-color 200ms;
+      padding: 1em 1em;
+
+      :nth-child(1) {
+        text-align: start;
+      }
+      :nth-child(2) {
+        text-align: end;
+      }
+      &:hover {
+        background-color: rgb(230, 230, 230);
+      }
+
+      .name {
+        font-weight: 700;
+        border-left: 2px solid black;
+        padding-left: 0.5em;
+      }
+      .date-graduation {
+        color: $clr-grey;
+      }
+      .info-list {
+        font-style: normal;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+#job-experience {
+  .company {
+    .name {
+      font-weight: 700;
+      font-size: $font-normal;
+
+      margin: 0;
+      padding: 0;
+    }
+
+    .project {
+      span.name {
+        font-weight: 700;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+
+li::marker {
+  color: $clr-primary-light;
 }

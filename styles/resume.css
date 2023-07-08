@@ -30,39 +30,104 @@ section header {
 section article {
   margin-block: 2em;
 }
-section#education span.university-name {
+
+#head {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+#head .photo > img {
+  width: 100%;
+  box-shadow: 0 0 0.5em 0.5em rgba(1, 1, 1, 0.2);
+}
+#head .description span.name {
+  font-size: 2em;
+  font-family: "PT Sans Bold";
+  color: black;
+}
+#head .description .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin-top: 1em;
+}
+#head .description .contacts .telegram,
+#head .description .contacts .email,
+#head .description .contacts .phone {
+  text-decoration: none;
+  color: black;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#head .description .contacts .telegram::before,
+#head .description .contacts .email::before,
+#head .description .contacts .phone::before {
+  content: "";
+  display: inline-flex;
+  margin-right: 0.5em;
+  background-size: repeat(2, 1em);
+  width: 1em;
+  height: 1em;
+}
+#head .description .contacts .telegram::before {
+  background-image: url("../svg/telegram.svg");
+}
+#head .description .contacts .email::before {
+  background-image: url("../svg/envelope-solid.svg");
+}
+#head .description .contacts .phone::before {
+  background-image: url("../svg/phone-solid.svg");
+}
+
+#education span.university-name {
   font-weight: 900;
   font-size: 1.2em;
 }
-section#education .degree-list {
+#education .degree-list {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
 }
-section#education .degree-list .degree-item {
+#education .degree-list .degree-item {
   display: grid;
   grid-template-columns: 2fr 1fr;
   transition: background-color 200ms;
   padding: 1em 1em;
 }
-section#education .degree-list .degree-item :nth-child(1) {
+#education .degree-list .degree-item :nth-child(1) {
   text-align: start;
 }
-section#education .degree-list .degree-item :nth-child(2) {
+#education .degree-list .degree-item :nth-child(2) {
   text-align: end;
 }
-section#education .degree-list .degree-item:hover {
+#education .degree-list .degree-item:hover {
   background-color: rgb(230, 230, 230);
 }
-section#education .degree-list .degree-item .name {
+#education .degree-list .degree-item .name {
   font-weight: 700;
   border-left: 2px solid black;
   padding-left: 0.5em;
 }
-section#education .degree-list .degree-item .date-graduation {
+#education .degree-list .degree-item .date-graduation {
   color: rgba(122, 122, 122, 0.6156862745);
 }
-section#education .degree-list .degree-item .info-list {
+#education .degree-list .degree-item .info-list {
   font-style: normal;
   margin-bottom: 0;
+}
+
+#job-experience .company .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+#job-experience .company .project span.name {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+li::marker {
+  color: #0399da;
 }/*# sourceMappingURL=resume.css.map */
